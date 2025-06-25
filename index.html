@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>sgrdacaa-enfermeria.msp.gob.ec</title>
+<link rel="icon" href="msp.png" type="image/png" />
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 3px;
+    background-color: #fff;
+    color: #414141;
+  }
+  .container {
+    max-width: 1276px;
+    margin: 0 auto;
+  }
+  table {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border-collapse: separate; /* Para que el borde externo no se mezcle con los bordes internos */
+    border-spacing: 0;          /* Sin espacios entre celdas */
+    border: 1px solid #ccc    /* Borde solo externo */
+ }
+
+td:first-child {
+  width: 49%;
+}
+
+td:last-child {
+  width: 51%;
+}
+  th, td {
+    border: 0px solid #e9e9e9;
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f3f3f3; /* Cambia el color del encabezado de la tabla */
+    color: #131313; /* Cambia el color del texto del encabezado */
+    font-weight: bold;
+    text-align: left;
+  }
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 22px 5px;
+    margin-bottom: 5px;
+  }
+  .header-text {
+    font-weight: 700;
+    font-size: 1.13rem;
+    line-height: 40px; /* Ajusta a tu gusto */
+  }
+  .header-text span {
+    display: block;
+  }
+  .header-logo {
+   width: 22%;      /* ocupa todo el ancho del contenedor */
+   height: auto;     /* mantiene proporción */
+   display: block;   /* elimina espacios abajo en línea */
+  }
+  .info-row {
+    background: linear-gradient(to bottom, #ffffff, #ececec);
+    border: 1px solid #ccc;
+    padding: 6px 7px;
+    font-size: 1.00rem;
+    margin-bottom: 5px;
+    line-height: 25px; /* Ajusta a tu gusto */
+  }
+  .subtitle {
+    background: linear-gradient(to bottom, #ffffff, #ececec);
+    padding: 6px 10px;
+    font-weight: 700;
+    color: #67a4c2;
+    font-size: 1.13rem;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  .tab-section {
+    display: flex;
+    background: linear-gradient(to bottom, #ffffff, #ececec);
+    border: 1px solid #ccc;
+    font-weight: 600;
+    font-size: 0.94rem;
+    padding: 8px 12px;
+    color: #67a4c2;
+    margin-bottom: 5px;
+  }
+  .tab-section span {
+    margin-right: 54px;
+  }
+  .table-content th,{
+    border: 1px solid #ccc;
+  }
+   .table-content td {
+    font-size: 0.92rem;
+  }
+  .vaccine-name {
+    font-weight: 700;
+    padding-top: 13px;    /* espacio solo arriba */
+  }
+  .vaccine-info {
+  font-style: normal;
+  color: #414141;
+  font-weight: normal;
+  line-height: 1.4;
+  padding-left: 10px; /* espacio a la izquierda */
+}
+  .vaccine-subinfo {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.93rem;
+    color: #414141;
+    line-height: 25px; /* Ajusta a tu gusto */
+    padding-bottom: 12px; /* solo espacio abajo */
+  }
+  .footer-section {
+    border: 1px solid #ccc;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    margin-top: 13px;
+  }
+  .footer-logo {
+    width: 288px;
+    height: auto;
+  }
+  .footer-date {
+    font-size: 1.00rem;
+    margin-top: 5px;
+    color: #444;
+  }
+  .footer-note {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 8px 10px;
+    color: ##414141;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    line-height: 1.2;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header-section" role="banner" aria-label="Encabezado de verificación">
+      <div class="header-text" aria-label="Títulos de verificación">
+        <span>VERIFICACIÓN DE HISTORIAL DE INMUNIZACIONES DEL MINISTERIO DE SALUD PÚBLICA</span>
+        <span>IMMUNIZATION HISTORY VERIFICATION OF MINISTRY OF PUBLIC HEALTH</span>
+        </div>
+      <img src="https://autfapn.presidencia.gob.ec/assets/images/logo.png" alt="Escudo de la República del Ecuador" class="header-logo" />
+    </div>
+
+    <!-- Personal info -->
+    <div class="info-row" role="contentinfo" aria-label="Información personal">
+      Name/Nombre: MÓNICA MARÍA PACICHE ACARO <br />
+      Date of birth/ Fecha de nacimiento: 1984/03/03
+    </div>
+
+    <!-- Vaccination details heading -->
+    <div class="subtitle" role="heading" aria-level="2">
+      Vaccination details / Datos de Vacunación
+    </div>
+
+    <div class="info-row" role="contentinfo" aria-label="Identificador e información del emisor">
+      Identifier/Identificación: 1103741235 <br />
+      Certificate issuer / Emisor del certificado <br />
+      Ministry of Public Health of Ecuador / Ministerio de Salud Pública del Ecuador
+    </div>
+
+    <!-- Tabs -->
+    <div class="tab-section" role="tablist" aria-label="Ficha de enfermedad y vacuna">
+      <span role="tab" aria-selected="true" tabindex="0" id="tab-enfermedad">Disease targeted / Enfermedad que se previene</span>
+      <span role="tab" tabindex="-1" id="tab-fiebre">Fiebre amarilla</span>
+    </div>
+
+    <!-- Vaccine and doses table -->
+    <table role="table" class="table-content" aria-label="Detalles de vacuna y estado de vacunación">
+      <thead>
+        <tr>
+          <th scope="col">Vaccine medical product / VacunaAdministrada</th>
+          <th scope="col">Number of dosis / Número de dosis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="vaccine-name">Fiebre Amarilla Completo</div>
+            <div class="vaccine-subinfo">Vacuna antiamarilica / Previene Fiebre Amarilla</div>
+          </td>
+          <td class="vaccine-info">
+            Dosis: 1<br />
+            Lot: y3a57<br />
+            Date / Fecha: 2025/06/10
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr><th colspan="2">Vaccination state / Estado Vacunación</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Complete / Completa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YES/SI</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Footer -->
+    <div class="footer-section" role="contentinfo" aria-label="Pie de página con logo y fecha de emisión">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH4SL-zu92tX3tyMHG2tReSs0mTy4HsuYwK51p0_TCvpuxjj5Z9bpHmqkjqh0BwG-7Fw&usqp=CAU" alt="El nuevo Ecuador" class="footer-logo" />
+    <div class="footer-date" aria-label="Fecha de emisión">
+  date of issue / fecha de emisión: <span id="live-time"></span>
+    </div>
+    <script>
+        function update() {
+        const d = new Date();
+        const f = d.toISOString().slice(0,10) + ' ' + d.toTimeString().slice(0,8);
+        document.getElementById('live-time').textContent = f;
+  }
+        update();               // Actualiza rápido al cargar
+        setInterval(update, 1000); // Luego cada segundo
+    </script>
+    </div>
+
+    <div class="footer-note" role="note" aria-label="Advertencia sobre verificación del certificado">
+      This view is a verification of the content of the certificate presented by the user. Before traveling, check applicable public health measures and check any restrictions at your destination.<br />
+      Esta vista es una verificación del contenido del certificado presentado por el usuario. Antes de viajar, consulte las medidas de salud pública aplicables y consulte las restricciones aplicables en el punto de destino.
+    </div>
+  </div>
+</body>
+</html>
+
