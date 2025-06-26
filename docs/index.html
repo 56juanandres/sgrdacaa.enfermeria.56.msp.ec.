@@ -22,15 +22,15 @@
     border-collapse: separate; /* Para que el borde externo no se mezcle con los bordes internos */
     border-spacing: 0;          /* Sin espacios entre celdas */
     border: 1px solid #ccc    /* Borde solo externo */
- }
+  }
 
-td:first-child {
-  width: 49%;
-}
+  td:first-child {
+    width: 49%;
+  }
 
-td:last-child {
-  width: 51%;
-}
+  td:last-child {
+    width: 51%;
+  }
   th, td {
     border: 0px solid #e9e9e9;
     padding: 8px 10px;
@@ -143,6 +143,67 @@ td:last-child {
     border: 1px solid #ccc;
     line-height: 1.2;
   }
+
+
+  /* Media query para pantallas pequeñas (móviles) */
+  @media (max-width: 600px) {
+    /* Header apilado verticalmente */
+    .header-section {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding: 10px 5px !important;
+    }
+    .header-text {
+      font-size: 1rem !important;
+      line-height: 1.2 !important;
+      margin-bottom: 10px !important;
+    }
+    .header-logo {
+      width: 50% !important;
+      max-width: 150px !important;
+      margin: 0 0 10px 0 !important;
+    }
+    /* Tabs apiladas */
+    .tab-section {
+      flex-wrap: wrap !important;
+      font-size: 0.85rem !important;
+      padding: 6px 8px !important;
+    }
+    .tab-section span {
+      margin-right: 15px !important;
+      margin-bottom: 5px !important;
+    }
+    /* Tabla y textos ajustados */
+    table {
+      table-layout: fixed !important;
+      width: 100% !important;
+      font-size: 0.9rem !important;
+    }
+    th, td {
+      font-size: 0.9rem !important;
+      word-break: break-word !important;
+    }
+    .vaccine-name {
+      font-size: 1rem !important;
+      padding-top: 10px !important;
+    }
+    .vaccine-info, .vaccine-subinfo {
+      font-size: 0.85rem !important;
+      padding-left: 5px !important;
+      padding-bottom: 8px !important;
+    }
+    /* Footer más compacto */
+    .footer-logo {
+      width: 80% !important;
+      max-width: 220px !important;
+    }
+    .footer-date {
+      font-size: 0.9rem !important;
+    }
+    .footer-note {
+      font-size: 0.7rem !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -234,4 +295,3 @@ td:last-child {
   </div>
 </body>
 </html>
-
